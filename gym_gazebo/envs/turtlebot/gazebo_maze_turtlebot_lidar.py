@@ -291,7 +291,7 @@ class GazeboMazeTurtlebotLidarEnv(gazebo_env.GazeboEnv):
         self.Write_Observ(state1, 1)
         return state
 
-    def Write_Observ(self, observarion, Turtle_Num, TurtleBot_path = '/home/mostafa/GP_Training/TurtleBot/'):
+    def Write_Observ(self, observarion, Turtle_Num, TurtleBot_path = '/home/agammal/GraduationProject/GPNavModel/TurtleBot/'):
         re = 0
         do = 0
         info = 0
@@ -304,7 +304,7 @@ class GazeboMazeTurtlebotLidarEnv(gazebo_env.GazeboEnv):
         with open(fileName, 'w') as outfile:
             json.dump(parameter_dictionary, outfile)
 
-    def Write_All(self, state, reward, done, info , Turtle_Num, TurtleBot_path = '/home/mostafa/GP_Training/TurtleBot/'):
+    def Write_All(self, state, reward, done, info , Turtle_Num, TurtleBot_path = '/home/agammal/GraduationProject/GPNavModel/TurtleBot/'):
         Action = 0
         parameter_keys = ['obervation','reward','done','info','action']
         parameter_values = [state, reward, done, info, Action] 
@@ -314,7 +314,7 @@ class GazeboMazeTurtlebotLidarEnv(gazebo_env.GazeboEnv):
             json.dump(parameter_dictionary, outfile)
 
 
-    def Get_Action(self,Turtle_Num, TurtleBot_path = '/home/mostafa/GP_Training/TurtleBot/'):
+    def Get_Action(self,Turtle_Num, TurtleBot_path = '/home/agammal/GraduationProject/GPNavModel/TurtleBot/'):
         params_json = str(TurtleBot_path) + str(Turtle_Num) + '.json'
 
         with open(params_json) as outfile:

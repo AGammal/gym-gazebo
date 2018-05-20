@@ -328,16 +328,16 @@ if __name__ == '__main__':
     #REMEMBER!: turtlebot_nn_setup.bash must be executed.
     env = gym.make('GazeboMazeTurtlebotLidar-v0') #GazeboCircuit2TurtlebotLidar-v0 GazeboCircuit2TurtlebotLidar-v0
    
-    outdir = '/home/mostafa/GP_Training/gazebo_gym_experiments/'
+    outdir = '/home/agammal/GraduationProject/GPNavModel/gazebo_gym_experiments/'
 
     #continue_execution = True  
     #fill this if continue_execution=True
 
-    weights_path = '/home/mostafa/GP_Training/turtle_c2_dqn_ep1300.h5'
-    monitor_path = '/home/mostafa/GP_Training/turtle_c2_dqn_ep1300'
-    params_json  = '/home/mostafa/GP_Training/turtle_c2_dqn_ep1300.json'
+    weights_path = '/home/agammal/GraduationProject/GPNavModel/turtle_c2_dqn_ep1300.h5'
+    monitor_path = '/home/agammal/GraduationProject/GPNavModel/turtle_c2_dqn_ep1300'
+    params_json  = '/home/agammal/GraduationProject/GPNavModel/turtle_c2_dqn_ep1300.json'
 
-    TurtleBot_info_path = '/home/mostafa/GP_Training/TurtleBot/'
+    TurtleBot_info_path = '/home/agammal/GraduationProject/GPNavModel/TurtleBot/'
     
     
     #Load weights, monitor info and parameter info.
