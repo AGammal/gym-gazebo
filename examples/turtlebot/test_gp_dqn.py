@@ -380,9 +380,10 @@ if __name__ == '__main__':
 
         # number of timesteps
         t=1
-        time.sleep(2)
+        time.sleep(10)
         while( t > 0 ):
             
+            time.sleep(1)
             # if f == True:
             #     time.sleep(20)
             #     f = False

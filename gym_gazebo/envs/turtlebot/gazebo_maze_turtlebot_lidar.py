@@ -128,19 +128,19 @@ class GazeboMazeTurtlebotLidarEnv(gazebo_env.GazeboEnv):
             print ("/gazebo/unpause_physics service call failed")
 
 
-        factor = 2
+        factor = 0
         vel_cmd = Twist()
         if action == 0: #FORWARD then go back
             vel_cmd.linear.x = -3.0*factor
-            vel_cmd.angular.z = -1.0
+            vel_cmd.angular.z = -2.0
             
         elif action == 1: #LEFT then go right
             vel_cmd.linear.x = -3.0*factor
-            vel_cmd.angular.z = -1.0
+            vel_cmd.angular.z = -2.0
            
         elif action == 2: #RIGHT then 
             vel_cmd.linear.x = -3.0*factor
-            vel_cmd.angular.z = 1.0
+            vel_cmd.angular.z = 2.0
         
         self.vel_pub.publish(vel_cmd)    
 
@@ -153,19 +153,19 @@ class GazeboMazeTurtlebotLidarEnv(gazebo_env.GazeboEnv):
             print ("/gazebo/unpause_physics service call failed")
 
 
-        factor = 2
+        factor = 0
         vel_cmd = Twist()
         if action == 0: #FORWARD then go back
             vel_cmd.linear.x = -3.0*factor
-            vel_cmd.angular.z = -1.0
+            vel_cmd.angular.z = -2.0
             
         elif action == 1: #LEFT then go right
             vel_cmd.linear.x = -3.0*factor
-            vel_cmd.angular.z = -1.0
+            vel_cmd.angular.z = -2.0
            
         elif action == 2: #RIGHT then 
             vel_cmd.linear.x = -3.0*factor
-            vel_cmd.angular.z = 1.0
+            vel_cmd.angular.z = 2.0
         
         self.vel_pub1.publish(vel_cmd)    
 
@@ -222,7 +222,8 @@ class GazeboMazeTurtlebotLidarEnv(gazebo_env.GazeboEnv):
         else:
             reward = -200
             terminated = True
-            print "Revered0 !! "
+            print "Revered bot 1!! "
+	    time.sleep(0.3)
             self.reverse_Action(action)
             
         terminated1 = False
@@ -234,6 +235,8 @@ class GazeboMazeTurtlebotLidarEnv(gazebo_env.GazeboEnv):
         else:
             reward1 = -200
             terminated1 = True
+	    print "Revers bot 2"
+	    time.sleep(0.3)
             self.reverse_Action1(action)
 
         self.Write_All(state1, reward, done1, [terminated1], 1)
